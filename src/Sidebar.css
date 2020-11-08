@@ -1,0 +1,51 @@
+.sidebar {
+  flex: 0.35 ;
+  background-color: #eeebeb;
+  border-right: 1px solid darkgray;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sidebar_header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid darkgray;
+}
+.header_search {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  flex: 1;
+  background: rgb(224, 224, 224);
+  border-radius: 5px;
+  border: 1px solid darkgray;
+}
+.header_search > input {
+  outline-width: 0;
+  background: transparent;
+  border: none;
+  flex: 1;
+}
+.header_icon {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.sidebar_chennel {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.logout_icon {
+  transform: rotate(180deg);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 520px) {
+  .sidebar {
+    flex: 1;
+  }
+}

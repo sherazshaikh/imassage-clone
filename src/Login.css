@@ -1,0 +1,21 @@
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.login > .login_logo{
+    height: 150px;
+    min-height: 100px;
+    object-fit: contain;
+
+}
+.login > Button{
+    background-color: rgb(18, 126, 250);
+    color: #fff;
+    max-width: 300px;
+    width: 300px;
+}
+.login > Button:hover{
+    color: #000;
+    background-color: rgb(223, 223, 223);
+}

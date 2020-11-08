@@ -1,0 +1,20 @@
+.message {
+    display: flex;
+    margin: 20px;
+}
+.msg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    color: gray;
+    max-width: 50%;
+}
+.time_stamp{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    
+}

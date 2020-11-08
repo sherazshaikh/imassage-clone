@@ -1,0 +1,26 @@
+.sidebar_chat {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid darkgray;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.sidebar_chat:hover {
+  background-color: dodgerblue;
+  color: #fff;
+  box-shadow: 0 0 10px gray;
+}
+.sidebarchat_info {
+  margin: 10px;
+  position: relative;
+  flex: 1;
+}
+.sidebarchat_info > small {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.sidebar_infoAvatar {
+  margin: 10px;
+  cursor: pointer;
+}
