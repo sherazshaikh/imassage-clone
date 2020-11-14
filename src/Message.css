@@ -1,20 +1,41 @@
 .message {
-    display: flex;
-    margin: 20px;
+  display: flex;
+  margin-bottom: 40px;
+  margin: 20px;
+  position: relative;
+flex-direction: row-reverse;
 }
-.msg{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: lightgrey;
-    padding: 10px;
-    border-radius: 10px;
-    color: gray;
-    max-width: 50%;
+.my_message{
+    align-self: flex-end;
+    flex-direction: row;
+
 }
-.time_stamp{
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    
+.my_message > .msg{
+    background-color: mediumslateblue;
+}
+.my_message > .msg > p{
+    color: #fff;
+}
+
+.msg {
+  display: flex;
+  background-color: lightgrey;
+  border-radius: 10px;
+
+}
+.msg > p {
+  overflow-wrap: break-word;
+  padding: 10px;
+  color: gray;
+  max-width: 400px;
+  min-width: 70px;
+  overflow-wrap: break-word;
+}
+
+.time_stamp {
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+  bottom: -15px;
+  color: gray;
 }

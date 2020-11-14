@@ -22,15 +22,20 @@
 }
 .chennel_name {
   color: #000;
+  margin-left: 10px;
 }
-.chat_messages {
+.chat_messages_section {
+  /* flex: 1; */
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-basis: 495px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
 .chat_inputSection {
   display: flex;
   justify-content: space-around;
@@ -39,7 +44,7 @@
   border-top: 1px solid darkgray;
   padding: 10px;
 }
-form{
+form {
   flex: 1;
 }
 .chat_inputSection > form > input {
@@ -51,10 +56,13 @@ form{
   height: 20px;
   padding: 15px 10px;
 }
+.detail{
+  color: royalblue;
+}
 
 
-@media screen and (max-width: 520px) {
-  .chat {
-    display: none;
+@media screen and (max-width:480px){
+  .chat{
+    flex: 0;
   }
 }

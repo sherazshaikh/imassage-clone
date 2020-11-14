@@ -1,3 +1,9 @@
 .imessage {
   display: flex;
 }
+.imessage > img{
+  height: 40px;
+  object-fit: contain;
+  align-self: center;
+  margin: 0 auto;
+}

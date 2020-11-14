@@ -14,6 +14,13 @@
   margin: 10px;
   position: relative;
   flex: 1;
+ 
+}
+.last_chat{
+  display: flex;
+  max-width:250px;
+  overflow: hidden;
+  font-size: 15px;
 }
 .sidebarchat_info > small {
   position: absolute;

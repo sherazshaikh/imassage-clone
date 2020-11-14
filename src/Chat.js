@@ -23,22 +23,22 @@ const Chat = () => {
         .doc(chatId)
         .collection("messages")
         .orderBy("timestamp", "desc")
-        .onSnapshot((snapshot) => {
+        .onSnapshot((snapshot) =>
           setMessage(
             snapshot.docs.map((doc) => ({
               id: doc.id,
-              data: doc.data,
+              data: doc.data(),
             }))
-          );
-        });
+          )
+        );
     }
-    console.log(user.user);
-  });
+  }, [chatId]);
   function sendMessage(e) {
     e.preventDefault();
 
     db.collection("chats").doc(chatId).collection("messages").add({
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      uid: user.user.uid,
       messages: input,
       email: user.user.email,
       photo: user.user.photo,
@@ -50,15 +50,14 @@ const Chat = () => {
     <div className="chat">
       <div className="chat_header">
         <div className="chennel_detail">
-          <Avatar />
           <h4>
-            {" "}
+            To:
             <span className="chennel_name">{chatName}</span>
           </h4>
         </div>
-        <small>Detaile</small>
+        <small className="detail">Detaile</small>
       </div>
-      <div className="chat_messages">
+      <div className="chat_messages_section">
         {messages.map(({ id, data }) => (
           <Message key={id} contents={data} />
         ))}
